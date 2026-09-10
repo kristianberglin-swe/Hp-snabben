@@ -1148,6 +1148,150 @@ body{
 }
 </style>
 
+
+<style id="hp45-forecast-words">
+#home .sectionGrid{
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  width:min(920px,100%)!important;
+}
+#home .forecastBtn{
+  border:2px solid #a96f16!important;
+  background:linear-gradient(180deg,#fff1c9 0%,#f1d99b 100%)!important;
+}
+#home .forecastBtn b{font-size:1.12rem!important}
+#home .forecastBtn:hover{background:#2f2b26!important}
+
+#forecast{overflow:auto!important;padding:18px!important}
+.forecastPage{
+  width:min(1000px,100%)!important;margin:0 auto!important;
+  padding:24px 28px 34px!important;box-sizing:border-box!important;overflow:visible!important;
+}
+.forecastTop{
+  display:flex;align-items:flex-start;gap:20px;border-bottom:2px solid #2d2923;
+  padding-bottom:14px;margin-bottom:18px;
+}
+.forecastTop h1{
+  margin:3px 0 0;font-family:Georgia,"Times New Roman",serif;
+  font-size:2rem;color:#211d18;
+}
+.forecastKicker{
+  font:800 .66rem/1.2 Arial,sans-serif;letter-spacing:.13em;color:#8b6c36;
+}
+.forecastInfo{
+  max-width:850px;margin:0 auto 24px;padding:16px 18px;
+  border:2px solid #b57a18;border-radius:10px;background:#fff0bd;
+  box-shadow:0 4px 0 #c4a66a;color:#2b261f;font-family:Arial,sans-serif;line-height:1.45;
+}
+.forecastInfo strong{display:block;margin-bottom:7px;font-size:.82rem;letter-spacing:.06em}
+.forecastInfo p{margin:0;font-size:.9rem;font-weight:600}
+.forecastList{
+  columns:4;column-gap:34px;margin:0;padding:0;list-style:none;
+  font-family:Georgia,"Times New Roman",serif;
+}
+.forecastList li{
+  break-inside:avoid;margin:0 0 9px;padding:0 0 7px;border-bottom:1px dotted #c5b79f;
+  font-size:1.03rem;font-weight:700;line-height:1.2;color:#28231d;
+}
+.forecastNo{
+  display:inline-block;min-width:30px;color:#927c5a;
+  font-family:Arial,sans-serif;font-size:.7rem;font-weight:800;
+}
+@media(max-width:800px){
+  #home .sectionGrid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  #forecast{padding:9px!important}
+  .forecastPage{padding:16px 14px 28px!important}
+  .forecastTop{gap:10px}
+  .forecastTop h1{font-size:1.65rem}
+  .forecastList{columns:2;column-gap:18px}
+  .forecastList li{font-size:1rem}
+}
+@media(max-width:430px){
+  .forecastInfo{padding:13px 14px}
+  .forecastInfo p{font-size:.84rem}
+  .forecastList{columns:1}
+  .forecastList li{font-size:1.05rem}
+}
+</style>
+
+<style id="hp46-forecast">
+.forecastList{columns:2!important}.forecastList li{break-inside:avoid;padding-bottom:10px!important}
+.forecastList li strong{font-size:1.06rem}.forecastDef{display:block;margin:3px 0 0 30px;font:600 .8rem/1.35 Arial,sans-serif;color:#625747}
+.forecastActions{text-align:center;margin:-8px 0 24px}.forecastPracticeBtn{padding:12px 22px;border:2px solid #6d552c;border-radius:9px;background:#e6b93f;box-shadow:0 4px 0 #9f7c2f;font:900 .82rem Arial,sans-serif;cursor:pointer}
+#forecastPractice{overflow:auto!important;padding:18px!important}.practiceShell{width:min(800px,100%);margin:auto}.forecastQuizCard{padding:28px!important;margin-top:14px!important}
+.forecastQuizCard h2{font:900 2.2rem Georgia,serif;margin:14px 0 6px}.forecastQuizPrompt{font:700 .85rem Arial,sans-serif;color:#6d6252}
+@media(max-width:650px){.forecastList{columns:1!important}.forecastDef{font-size:.84rem}#forecastPractice{padding:8px!important}.forecastQuizCard{padding:18px 14px!important}}
+</style>
+
+<style id="hp47-study">
+#home .studyBtn{background:linear-gradient(180deg,#efe0bd,#e3c993)!important;border-color:#80673d!important}
+#home .studyBtn b{font-size:1.08rem!important}
+.studyPage{width:min(980px,calc(100% - 28px));margin:18px auto 50px;padding:28px 34px;background:#f8edda}
+.studyTop{display:flex;gap:18px;align-items:flex-start;border-bottom:1px solid #b8a78b;padding-bottom:18px}
+.studyTop h1{font:900 2.15rem Georgia,serif;margin:3px 0 4px}.studyTop p{margin:0;color:#655b4c;font:600 .83rem/1.45 Arial,sans-serif}
+.studyKicker{font:900 .67rem Arial,sans-serif;letter-spacing:.14em;color:#80673d}
+.studyTabs{display:flex;gap:10px;margin:22px 0}.studyTab{flex:1;padding:13px;border:1px solid #8d7f68;border-radius:8px;background:#efe1c7;box-shadow:0 3px 0 #b5a58a;font:900 1rem Georgia,serif;cursor:pointer}
+.studyTab.active{background:#2f2b26;color:#fff;box-shadow:0 3px 0 #111}
+.studyGuide{display:none;font:500 1rem/1.62 Georgia,serif;color:#302b25}.studyGuide.active{display:block}
+.studyHero{display:flex;align-items:center;gap:18px;margin:8px 0 20px}.studyHero>span{display:grid;place-items:center;width:82px;height:82px;border:2px solid #2f2b26;border-radius:12px;background:#e8c35f;box-shadow:5px 5px 0 #8d7f68;font:900 1.55rem Georgia,serif}
+.studyHero h2{font:900 1.8rem Georgia,serif;margin:0 0 4px}.studyHero p{margin:0;font:700 .75rem Arial,sans-serif;color:#776b5b}
+.studyGuide h3{font:900 1.22rem Georgia,serif;margin:25px 0 7px}.studyGuide p{margin:7px 0 12px}
+.studyLead,.studyTip,.studyChecklist,.studyPlan{border:1px solid #b4a183;border-radius:8px;padding:15px 17px;margin:16px 0;background:#fff8e9}
+.studyLead{border-left:6px solid #c79728}.studyTip{background:#f1e3bd;border-left:6px solid #80673d}
+.studyChecklist{background:#efe7d5}.studyChecklist h3{margin:0 0 9px}.studyChecklist p{font:700 .88rem/1.55 Arial,sans-serif}
+.studyPlan{background:#2f2b26;color:#fff;border-color:#2f2b26;font:700 .9rem/1.55 Arial,sans-serif}
+@media(max-width:650px){
+ .studyPage{width:calc(100% - 12px);margin:6px auto 30px;padding:18px 14px}
+ .studyTop{gap:10px}.studyTop h1{font-size:1.65rem}.studyTop p{font-size:.75rem}
+ .studyTabs{position:sticky;top:58px;z-index:30;background:#f8edda;padding:8px 0;margin:12px 0}
+ .studyTab{padding:11px 4px}.studyGuide{font-size:.96rem;line-height:1.58}
+ .studyHero{gap:12px}.studyHero>span{width:64px;height:64px;font-size:1.2rem}.studyHero h2{font-size:1.4rem}
+ .studyChecklist p{font-size:.82rem}
+}
+</style>
+
+<style id="hp48-scroll">
+#study.screen{
+ position:fixed!important;inset:0!important;width:100%!important;height:100dvh!important;
+ max-height:100dvh!important;overflow-y:auto!important;overflow-x:hidden!important;
+ -webkit-overflow-scrolling:touch!important;box-sizing:border-box!important;padding-top:74px!important;
+}
+#study .studyPage,#study .studyGuide{height:auto!important;max-height:none!important;overflow:visible!important}
+#study .studyPage{min-height:calc(100dvh - 100px)!important;margin-bottom:48px!important}
+#study .studyTabs{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important}
+#study .studyForecastTab{font-size:.82rem!important;white-space:nowrap!important}
+@media(max-width:650px){
+ #study.screen{padding-top:68px!important}
+ #study .studyPage{margin-bottom:30px!important}
+ #study .studyTabs{grid-template-columns:repeat(2,minmax(0,1fr))!important;top:0!important}
+ #study .studyForecastTab{font-size:.78rem!important}
+}
+</style>
+
+<style id="hp50-study-uniform">
+#study .studyLead,
+#study .studyTip,
+#study .studyChecklist,
+#study .studyPlan{
+  box-sizing:border-box!important;
+  background:#fff8e9!important;
+  color:#302b25!important;
+  border:1px solid #b4a183!important;
+  border-left:5px solid #c79728!important;
+  border-radius:8px!important;
+  box-shadow:none!important;
+  padding:15px 17px!important;
+  margin:16px 0!important;
+}
+#study .studyChecklist h3{
+  margin:0 0 9px!important;
+  color:#302b25!important;
+}
+#study .studyChecklist p,
+#study .studyPlan{
+  color:#302b25!important;
+}
+</style>
+
 </head>
 <body>
 <div class="xpHud xpWide" id="xpHud">
@@ -1183,8 +1327,145 @@ body{
       <button class="sectionBtn" data-cat="KVA"><b>KVA</b><span>Kvantitativa jämförelser</span><span class="sectionStars" data-stars="KVA" aria-label="Dagens slutförda pass"></span></button>
       <button class="sectionBtn" data-cat="NOG"><b>NOG</b><span>Kvantitativa resonemang</span><span class="sectionStars" data-stars="NOG" aria-label="Dagens slutförda pass"></span></button>
       <button class="sectionBtn" data-cat="DTK"><b>DTK</b><span>Diagram · Tabell · Karta</span><span class="sectionStars" data-stars="DTK" aria-label="Dagens slutförda pass"></span></button>
+      <button class="sectionBtn studyBtn" id="studyBtn" type="button">
+        <b>STUDIETIPS</b><span>ORD · XYZ · KVA · NOG</span>
+      </button>
     </div>
     <div class="startNote">DAGSMÅL: 100 XP · +10 XP FÖR VARJE RÄTT SVAR · MATTEFACIT KONTROLLERAT</div>
+  </div>
+</section>
+
+
+<section id="study" class="screen">
+  <div class="studyPage card">
+    <div class="studyTop">
+      <button class="exit" id="studyBack" type="button">← TILLBAKA</button>
+      <div>
+        <div class="studyKicker">HP-SNABBEN · STUDIEVÄGLEDNING</div>
+        <h1>Studietips</h1>
+        <p>Bygger på mönster i tidigare kvantitativa högskoleprov 2022–2026. Välj delprov.</p>
+      </div>
+    </div>
+    <div class="studyTabs">
+      <button class="studyTab active" data-study="XYZ">XYZ</button>
+      <button class="studyTab" data-study="KVA">KVA</button>
+      <button class="studyTab" data-study="NOG">NOG</button>
+      <button class="studyTab studyForecastTab" id="studyForecastBtn" type="button">PROGNOS ORD</button>
+    </div>
+
+    <article class="studyGuide active" id="studyXYZ">
+      <div class="studyHero"><span>XYZ</span><div><h2>Matematisk problemlösning</h2></div></div>
+      <div class="studyLead"><strong>Kärnan:</strong> XYZ testar om du snabbt kan känna igen vilken grundläggande matematik som behövs och genomföra en kort lösning. Uppgifterna växlar mycket i yta, men samma baskunskaper återkommer.</div>
+      <h3>Så brukar frågorna vara upplagda</h3>
+      <p>En XYZ-uppgift ger ett matematiskt problem och fyra svarsalternativ. I proven 2022–2026 återkommer både rena beräkningar och korta textproblem. Vanliga former är att förenkla ett uttryck, lösa en ekvation, bestämma ett funktionsvärde, tolka en linjär funktion, räkna med procent eller förhållanden, använda medelvärde samt lösa geometriska problem med vinklar, area och längd.</p>
+      <p>Det viktiga är därför inte avancerad matematik. Det viktiga är att grundmetoderna sitter så bra att du snabbt ser vilken metod som passar. Många uppgifter går att lösa på betydligt mindre än en minut om du känner igen typen direkt.</p>
+
+      <h3>1. Aritmetik, bråk och tal</h3>
+      <p>Var säker på de fyra räknesätten, negativa tal, prioriteringsregler, bråk, decimaler, potenser och rötter. Träna särskilt på att förkorta bråk innan du multiplicerar och på att uppskatta storleksordningen innan du räknar exakt. Delbarhet, jämna och udda tal samt enkla talmönster förekommer också.</p>
+      <div class="studyTip"><b>HP-strategi:</b> Titta på svarsalternativen innan du börjar en lång uträkning. Ibland räcker en uppskattning eller att testa alternativen.</div>
+
+      <h3>2. Procent, proportioner och förändringar</h3>
+      <p>Du bör snabbt kunna räkna procent av ett tal, procentuell ökning och minskning samt arbeta baklänges från ett slutvärde. Repetera också förhållanden, proportionalitet och skala. Två procentförändringar efter varandra ska behandlas som två multiplikationer – procentsatserna kan normalt inte bara adderas.</p>
+
+      <h3>3. Algebra och ekvationer</h3>
+      <p>Detta är ett av de viktigaste repetitionsområdena. Kunna förenkla uttryck, multiplicera parenteser, bryta ut faktorer, hantera bråk med variabler och lösa enkla ekvationer. Du ska också kunna sätta in givna värden i uttryck utan att tappa tecken eller parenteser.</p>
+      <p>Träna på att översätta kort text till algebra. Formuleringar som ”medelvärdet är”, ”dubbelt så stor”, ”ökar med tre per dag” och ”förhållandet är 3:7” ska snabbt kunna bli en ekvation eller funktion.</p>
+
+      <h3>4. Funktioner och koordinatsystem</h3>
+      <p>Linjär funktion återkommer ofta. Repetera <em>y = kx + m</em>, riktningskoefficient, skärning med axlarna, parallella linjer och hur två punkter bestämmer en linje. Kunna beräkna f(x), lösa f(x)=ett givet värde och tolka en enkel graf.</p>
+
+      <h3>5. Geometri</h3>
+      <p>Kunna triangelns vinkelsumma, vinklar vid parallella linjer, area och omkrets för vanliga figurer, cirkelns grundformler och Pythagoras sats. Figurerna är ofta enkla men kan innehålla extra information som du inte behöver. Rita gärna in kända längder och vinklar direkt.</p>
+
+      <h3>6. Statistik, medelvärde och vardagsproblem</h3>
+      <p>Medelvärde är mycket vanligt och kombineras ibland med en okänd variabel. Repetera även enkel sannolikhet, hastighet–tid–sträcka och hur man arbetar med enheter. För dessa uppgifter är en tydlig uppställning ofta viktigare än avancerade formler.</p>
+
+      <h3>Vanliga fällor</h3>
+      <p>Teckenfel, fel prioriteringsordning, att blanda ihop procent och procentenheter, att använda diameter där radie behövs, att läsa av fel enhet och att fortsätta räkna långt efter att svarsalternativen redan avslöjat svaret. En annan fälla är att fastna: XYZ är tidsmässigt byggt för ungefär en minut per fråga.</p>
+
+      <div class="studyChecklist"><h3>DET HÄR SKA DU KUNNA</h3>
+        <p><b>MYCKET VIKTIGT</b> ☐ Bråk och procent ☐ Ekvationer ☐ Algebraiska uttryck ☐ Linjära funktioner ☐ Vinklar, area och Pythagoras ☐ Medelvärde</p>
+        <p><b>VIKTIGT</b> ☐ Potenser och rötter ☐ Förhållanden ☐ Hastighet/tid/sträcka ☐ Enhetsomvandling ☐ Koordinatsystem</p>
+        <p><b>BRA ATT KUNNA</b> ☐ Delbarhet ☐ Talserier ☐ Enkel sannolikhet ☐ Smart uppskattning</p>
+      </div>
+      <div class="studyPlan"><b>Repetera i denna ordning:</b> 1) bråk/procent → 2) algebra/ekvationer → 3) geometri → 4) funktioner → 5) medelvärde/proportioner → 6) blandade XYZ under tid.</div>
+    </article>
+
+    <article class="studyGuide" id="studyKVA">
+      <div class="studyHero"><span>KVA</span><div><h2>Kvantitativa jämförelser</h2></div></div>
+      <div class="studyLead"><strong>Kärnan:</strong> Du ska inte nödvändigtvis räkna fram två exakta värden. Du ska avgöra om kvantitet I är större, kvantitet II är större, de är lika – eller om informationen inte räcker.</div>
+      <h3>Så brukar frågorna vara upplagda</h3>
+      <p>Samma fyra svarstyper återkommer genom hela KVA. Själva matematiken hämtas från samma grundområden som XYZ: aritmetik, algebra, geometri, funktioner och statistik. Skillnaden är tankesättet. Frågan är alltid relationen mellan två storheter.</p>
+      <p>Det gör KVA till ett delprov där strategi ger mycket. En fullständig lösning kan vara onödig. Förenkla båda sidor, jämför gemensamma delar, studera tecken eller testa tillåtna värden.</p>
+
+      <h3>1. Lär dig svarsalternativen utantill</h3>
+      <p>Du bör omedelbart veta vad A, B, C och D betyder. Då använder du arbetsminnet till matematiken i stället för att läsa svarsmallen varje gång. Särskilt D – informationen är otillräcklig – kräver disciplin: välj det bara när olika tillåtna fall faktiskt kan ge olika relationer.</p>
+
+      <h3>2. Testa värden smart</h3>
+      <p>Om variablerna inte är exakt bestämda, fråga: kan relationen ändras? Testa enkla tillåtna värden, gärna ett litet och ett stort värde eller positiva och negativa värden när båda är möjliga. Om ett fall ger I&gt;II och ett annat I&lt;II är informationen otillräcklig.</p>
+      <div class="studyTip"><b>HP-strategi:</b> Ett enda exempel bevisar sällan att en relation alltid gäller. Men två motexempel kan snabbt bevisa att informationen är otillräcklig.</div>
+
+      <h3>3. Tecken och intervall är avgörande</h3>
+      <p>Villkor som x&gt;0, x&lt;0 eller 0&lt;x&lt;1 kan helt ändra jämförelsen. Repetera därför hur multiplikation, division, kvadrering och reciproker påverkas av positiva och negativa tal. För tal mellan 0 och 1 blir exempelvis kvadraten mindre än talet självt.</p>
+
+      <h3>4. Algebra utan onödiga steg</h3>
+      <p>Om båda kvantiteterna innehåller samma term kan den ofta elimineras mentalt. Förenkla bara så långt som behövs för att avgöra relationen. Repetera ekvationer, medelvärde, potenser och bråkräkning – men träna på jämförelse snarare än på att alltid få fram ett slutvärde.</p>
+
+      <h3>5. Geometri: anta aldrig mer än figuren säger</h3>
+      <p>En figur behöver inte vara skalenlig. Använd endast givna längder, vinklar och geometriska regler. Triangelolikheten, vinkelsummor, area och Pythagoras är särskilt användbara när två geometriska storheter ska jämföras.</p>
+
+      <h3>6. Jämför enheter och proportionalitet</h3>
+      <p>Vardagsproblem kan jämföra exempelvis förbrukning, hastighet eller kostnad. Skriv om storheterna till samma enhet och jämför kvoter. Ofta behövs bara en kort proportionalitetsberäkning.</p>
+
+      <h3>Vanliga fällor</h3>
+      <p>Den största fällan är att anta ett värde på en variabel och tro att det gäller generellt. Andra fällor är att anta att en ritad figur är skalenlig, missa ett teckenvillkor eller lägga tid på att räkna fram exakta tal när endast relationen behövs.</p>
+
+      <div class="studyChecklist"><h3>DET HÄR SKA DU KUNNA</h3>
+        <p><b>MYCKET VIKTIGT</b> ☐ Positiva/negativa tal ☐ Olikheter ☐ Bråk ☐ Algebraisk förenkling ☐ Testa flera tillåtna fall ☐ Känna igen otillräcklig information</p>
+        <p><b>VIKTIGT</b> ☐ Procent och proportioner ☐ Potenser ☐ Medelvärde ☐ Vinklar/area/Pythagoras ☐ Enheter</p>
+        <p><b>BRA ATT KUNNA</b> ☐ Uppskattning ☐ Extremfall ☐ Jämförelse utan exakt uträkning</p>
+      </div>
+      <div class="studyPlan"><b>Repetera i denna ordning:</b> 1) tecken/olikheter → 2) bråk och algebra → 3) testvärden → 4) geometri → 5) procent/proportioner → 6) KVA-pass där du tvingar dig att undvika onödiga uträkningar.</div>
+    </article>
+
+    <article class="studyGuide" id="studyNOG">
+      <div class="studyHero"><span>NOG</span><div><h2>Kvantitativa resonemang</h2></div></div>
+      <div class="studyLead"><strong>Kärnan:</strong> NOG testar inte bara om du kan lösa ett problem. Du ska avgöra vilken av två informationsmängder som är tillräcklig för att få ett entydigt svar.</div>
+      <h3>Så brukar frågorna vara upplagda</h3>
+      <p>Först kommer en fråga. Därefter får du två påståenden, (1) och (2). Svarsalternativen anger om (1) räcker ensam, om (2) räcker ensam, om de måste kombineras, om båda räcker var för sig eller om inte ens båda tillsammans räcker. Tidigare prov använder både algebraiska problem och logiska placerings-/antalproblem i detta format.</p>
+
+      <h3>Den viktigaste arbetsgången</h3>
+      <p><b>Steg 1:</b> Läs exakt vad som efterfrågas. <b>Steg 2:</b> Pröva (1) helt utan att använda (2). <b>Steg 3:</b> Pröva (2) helt utan att använda (1). <b>Steg 4:</b> Om ingen räcker ensam, kombinera dem. <b>Steg 5:</b> kontrollera att svaret verkligen är entydigt.</p>
+      <div class="studyTip"><b>HP-strategi:</b> Den vanligaste NOG-missen är att omedvetet låna information från det andra påståendet. Håll (1) och (2) strikt åtskilda tills du uttryckligen testar kombinationen.</div>
+
+      <h3>1. Tillräcklig betyder entydig</h3>
+      <p>Du behöver inte alltid räkna ut själva talet. Om du kan visa att endast ett enda svar är möjligt är informationen tillräcklig. Om två olika lösningar fortfarande uppfyller villkoren är informationen otillräcklig.</p>
+
+      <h3>2. Algebraiska NOG-problem</h3>
+      <p>Repetera enkla ekvationssystem, samband mellan variabler, procent, medelvärde, förhållanden och heltalsvillkor. Räkna gärna hur många okända och hur många oberoende samband du har – men kom ihåg att särskilda villkor ibland kan göra ett problem entydigt trots få ekvationer.</p>
+
+      <h3>3. Heltal, delbarhet och antal</h3>
+      <p>NOG använder ofta villkor som ”positivt heltal”, ”jämnt delbart”, ”fler än” eller ett bestämt totalt antal. Sådana villkor kan begränsa möjliga lösningar kraftigt. Träna på att lista ett litet antal möjliga fall systematiskt i stället för att gissa.</p>
+
+      <h3>4. Logiska ordnings- och placeringsproblem</h3>
+      <p>Rita upp platser, personer eller föremål som enkla rutor. Markera ”intill”, ”mellan”, ”före”, ”efter” och andra begränsningar. Försök sedan hitta två olika arrangemang som båda uppfyller informationen. Kan du det, är informationen inte tillräcklig.</p>
+
+      <h3>5. Geometri och mått</h3>
+      <p>I geometriska NOG-frågor behöver du veta vilken information som krävs för att bestämma exempelvis area, längd eller vinkel. Repetera därför grundformlerna men träna framför allt på frågan: vilka storheter måste vara kända för att svaret ska bli unikt?</p>
+
+      <h3>6. Bevisa otillräcklighet med motexempel</h3>
+      <p>Det snabbaste sättet att visa att ett påstående inte räcker är ofta att hitta två tillåtna situationer som ger olika svar på huvudfrågan. Du behöver inte kartlägga alla möjligheter. Två fungerande motexempel räcker.</p>
+
+      <h3>Vanliga fällor</h3>
+      <p>Att lösa hela problemet innan man bedömer påståendena, att kombinera (1) och (2) för tidigt, att nöja sig med ett möjligt svar i stället för ett entydigt svar samt att glömma villkor som heltal, positivt tal eller olika värden.</p>
+
+      <div class="studyChecklist"><h3>DET HÄR SKA DU KUNNA</h3>
+        <p><b>MYCKET VIKTIGT</b> ☐ Testa (1) och (2) separat ☐ Avgöra entydighet ☐ Ekvationer och samband ☐ Heltalsvillkor ☐ Hitta motexempel ☐ Logiskt resonemang</p>
+        <p><b>VIKTIGT</b> ☐ Procent/förhållanden ☐ Medelvärde ☐ Enkel geometri ☐ Ordning och placering ☐ Systematisk falluppdelning</p>
+        <p><b>BRA ATT KUNNA</b> ☐ Snabb skiss ☐ Eliminera omöjliga fall ☐ Sluta räkna så fort tillräckligheten är avgjord</p>
+      </div>
+      <div class="studyPlan"><b>Repetera i denna ordning:</b> 1) lär svarsmallen → 2) träna separat prövning av (1)/(2) → 3) algebra/heltal → 4) logiska placeringar → 5) geometri/proportioner → 6) hela NOG-pass under tid.</div>
+    </article>
   </div>
 </section>
 
@@ -1208,6 +1489,238 @@ body{
     </div>
 </section>
 
+
+<section id="forecast" class="screen">
+  <div class="forecastPage card">
+    <div class="forecastTop">
+      <button class="exit" id="forecastBack" type="button">← TILLBAKA</button>
+      <div>
+        <div class="forecastKicker">HP-SNABBEN · AI-PROGNOS</div>
+        <h1>Prognos ord</h1>
+      </div>
+    </div>
+    <div class="forecastInfo">
+      <strong>AI-ANALYS – INTE OFFICIELLA HP-FRÅGOR</strong>
+      <p>De här 200 orden är framtagna genom AI-analys av typen av ord som förekommer på Högskoleprovets ORD-del. Listan är en prognos och inte information från UHR. Samtliga ord är kontrollerade mot ORD-frågorna i HP-snabbens nuvarande frågebank och har inte förekommit där.</p>
+    </div>
+<div class="forecastActions"><button id="forecastPracticeBtn" class="forecastPracticeBtn" type="button">ÖVA PROGNOSORD</button></div>
+    <ol class="forecastList">
+<li><span class="forecastNo">1.</span><strong>abdikera</strong><span class="forecastDef">avsäga sig en tron eller annan hög ställning.</span></li>
+<li><span class="forecastNo">2.</span><strong>abstrus</strong><span class="forecastDef">svårbegriplig och invecklad.</span></li>
+<li><span class="forecastNo">3.</span><strong>acklamation</strong><span class="forecastDef">beslut genom muntligt bifall utan rösträkning.</span></li>
+<li><span class="forecastNo">4.</span><strong>adekvat</strong><span class="forecastDef">lämplig och tillräcklig för ändamålet.</span></li>
+<li><span class="forecastNo">5.</span><strong>affekterad</strong><span class="forecastDef">konstlad eller tillgjord i sitt sätt.</span></li>
+<li><span class="forecastNo">6.</span><strong>aggregera</strong><span class="forecastDef">samla eller slå ihop till en helhet.</span></li>
+<li><span class="forecastNo">7.</span><strong>aktsam</strong><span class="forecastDef">försiktig och varsam.</span></li>
+<li><span class="forecastNo">8.</span><strong>allokera</strong><span class="forecastDef">fördela resurser till ett visst ändamål.</span></li>
+<li><span class="forecastNo">9.</span><strong>ambivalent</strong><span class="forecastDef">kluven mellan motstridiga känslor eller uppfattningar.</span></li>
+<li><span class="forecastNo">10.</span><strong>anakronism</strong><span class="forecastDef">något som hör hemma i en annan tidsperiod.</span></li>
+<li><span class="forecastNo">11.</span><strong>anamma</strong><span class="forecastDef">ta till sig eller börja använda.</span></li>
+<li><span class="forecastNo">12.</span><strong>annalkande</strong><span class="forecastDef">som närmar sig eller snart inträffar.</span></li>
+<li><span class="forecastNo">13.</span><strong>anomali</strong><span class="forecastDef">avvikelse från det normala eller förväntade.</span></li>
+<li><span class="forecastNo">14.</span><strong>anspråkslös</strong><span class="forecastDef">enkel och utan krav på uppmärksamhet.</span></li>
+<li><span class="forecastNo">15.</span><strong>antagonistisk</strong><span class="forecastDef">fientligt eller motverkande inställd.</span></li>
+<li><span class="forecastNo">16.</span><strong>apatisk</strong><span class="forecastDef">likgiltig och utan energi eller engagemang.</span></li>
+<li><span class="forecastNo">17.</span><strong>arbiträr</strong><span class="forecastDef">godtycklig och utan tydlig saklig grund.</span></li>
+<li><span class="forecastNo">18.</span><strong>arvedel</strong><span class="forecastDef">den del av ett arv som tillfaller en arvinge.</span></li>
+<li><span class="forecastNo">19.</span><strong>asketisk</strong><span class="forecastDef">präglad av självdisciplin och avstående från bekvämligheter.</span></li>
+<li><span class="forecastNo">20.</span><strong>assimilera</strong><span class="forecastDef">införliva så att något blir en del av en större helhet.</span></li>
+<li><span class="forecastNo">21.</span><strong>autentisk</strong><span class="forecastDef">äkta och trovärdig.</span></li>
+<li><span class="forecastNo">22.</span><strong>avfärda</strong><span class="forecastDef">förkasta eller inte ta på allvar.</span></li>
+<li><span class="forecastNo">23.</span><strong>avog</strong><span class="forecastDef">negativt eller motvilligt inställd.</span></li>
+<li><span class="forecastNo">24.</span><strong>avyttra</strong><span class="forecastDef">sälja eller göra sig av med egendom.</span></li>
+<li><span class="forecastNo">25.</span><strong>balansgång</strong><span class="forecastDef">svår avvägning mellan motstridiga krav.</span></li>
+<li><span class="forecastNo">26.</span><strong>befryndad</strong><span class="forecastDef">besläktad eller nära förbunden.</span></li>
+<li><span class="forecastNo">27.</span><strong>behjärtansvärd</strong><span class="forecastDef">värd stöd, uppskattning eller sympati.</span></li>
+<li><span class="forecastNo">28.</span><strong>benägen</strong><span class="forecastDef">ha lätt eller tendens att göra något.</span></li>
+<li><span class="forecastNo">29.</span><strong>beriktigande</strong><span class="forecastDef">rättelse av en felaktig uppgift.</span></li>
+<li><span class="forecastNo">30.</span><strong>beskaffenhet</strong><span class="forecastDef">hur något är beskaffat eller sammansatt.</span></li>
+<li><span class="forecastNo">31.</span><strong>besudla</strong><span class="forecastDef">smutsa ner, konkret eller bildligt.</span></li>
+<li><span class="forecastNo">32.</span><strong>beveka</strong><span class="forecastDef">förmå någon att ge efter genom vädjan.</span></li>
+<li><span class="forecastNo">33.</span><strong>bevekelsegrund</strong><span class="forecastDef">skäl eller motiv som påverkar ett beslut.</span></li>
+<li><span class="forecastNo">34.</span><strong>bifall</strong><span class="forecastDef">godkännande eller instämmande.</span></li>
+<li><span class="forecastNo">35.</span><strong>bisarr</strong><span class="forecastDef">mycket egendomlig eller underlig.</span></li>
+<li><span class="forecastNo">36.</span><strong>borgenär</strong><span class="forecastDef">person eller organisation som har pengar att fordra.</span></li>
+<li><span class="forecastNo">37.</span><strong>brasklapp</strong><span class="forecastDef">reservation eller förbehåll som läggs till ett uttalande.</span></li>
+<li><span class="forecastNo">38.</span><strong>burdus</strong><span class="forecastDef">ohövlig och bufflig.</span></li>
+<li><span class="forecastNo">39.</span><strong>cynisk</strong><span class="forecastDef">misstroende mot människors motiv och ofta känslokall.</span></li>
+<li><span class="forecastNo">40.</span><strong>debacel</strong><span class="forecastDef">stort misslyckande eller sammanbrott.</span></li>
+<li><span class="forecastNo">41.</span><strong>deducera</strong><span class="forecastDef">dra en slutsats från allmänna premisser.</span></li>
+<li><span class="forecastNo">42.</span><strong>deklamera</strong><span class="forecastDef">framföra text högt och uttrycksfullt.</span></li>
+<li><span class="forecastNo">43.</span><strong>delikat</strong><span class="forecastDef">känslig eller svår att hantera.</span></li>
+<li><span class="forecastNo">44.</span><strong>desavouera</strong><span class="forecastDef">ta avstånd från eller underkänna någon eller något.</span></li>
+<li><span class="forecastNo">45.</span><strong>desillusionerad</strong><span class="forecastDef">besviken efter att ha förlorat tidigare föreställningar.</span></li>
+<li><span class="forecastNo">46.</span><strong>devot</strong><span class="forecastDef">mycket hängiven eller underdånig.</span></li>
+<li><span class="forecastNo">47.</span><strong>diffus</strong><span class="forecastDef">otydlig, utspridd eller svår att avgränsa.</span></li>
+<li><span class="forecastNo">48.</span><strong>diskrepans</strong><span class="forecastDef">bristande överensstämmelse eller tydlig skillnad.</span></li>
+<li><span class="forecastNo">49.</span><strong>dogmatisk</strong><span class="forecastDef">tvärsäker och bunden vid fasta läror.</span></li>
+<li><span class="forecastNo">50.</span><strong>drastisk</strong><span class="forecastDef">kraftig och långtgående.</span></li>
+<li><span class="forecastNo">51.</span><strong>dubier</strong><span class="forecastDef">tvivel eller betänkligheter.</span></li>
+<li><span class="forecastNo">52.</span><strong>efemär</strong><span class="forecastDef">kortvarig och snabbt övergående.</span></li>
+<li><span class="forecastNo">53.</span><strong>eftertrycklig</strong><span class="forecastDef">tydlig, bestämd och kraftfull.</span></li>
+<li><span class="forecastNo">54.</span><strong>eklektisk</strong><span class="forecastDef">sammansatt av idéer eller stilar från olika håll.</span></li>
+<li><span class="forecastNo">55.</span><strong>elaborera</strong><span class="forecastDef">utveckla eller bearbeta något mer utförligt.</span></li>
+<li><span class="forecastNo">56.</span><strong>emfas</strong><span class="forecastDef">särskild betoning eller eftertryck.</span></li>
+<li><span class="forecastNo">57.</span><strong>eminent</strong><span class="forecastDef">framstående och mycket skicklig.</span></li>
+<li><span class="forecastNo">58.</span><strong>empirisk</strong><span class="forecastDef">grundad på observationer eller erfarenheter.</span></li>
+<li><span class="forecastNo">59.</span><strong>endräkt</strong><span class="forecastDef">enighet och samförstånd.</span></li>
+<li><span class="forecastNo">60.</span><strong>enkom</strong><span class="forecastDef">uteslutande eller särskilt för ett visst syfte.</span></li>
+<li><span class="forecastNo">61.</span><strong>epigon</strong><span class="forecastDef">osjälvständig efterföljare till en betydande förebild.</span></li>
+<li><span class="forecastNo">62.</span><strong>erbarmlig</strong><span class="forecastDef">mycket dålig, usel eller eländig.</span></li>
+<li><span class="forecastNo">63.</span><strong>erodera</strong><span class="forecastDef">nötas bort eller gradvis försvagas.</span></li>
+<li><span class="forecastNo">64.</span><strong>esoterisk</strong><span class="forecastDef">avsedd för eller begriplig för en liten invigd krets.</span></li>
+<li><span class="forecastNo">65.</span><strong>eufemism</strong><span class="forecastDef">förskönande eller mildrande omskrivning.</span></li>
+<li><span class="forecastNo">66.</span><strong>exalterad</strong><span class="forecastDef">mycket upphetsad eller överdrivet entusiastisk.</span></li>
+<li><span class="forecastNo">67.</span><strong>excentrisk</strong><span class="forecastDef">påfallande avvikande från det vanliga.</span></li>
+<li><span class="forecastNo">68.</span><strong>exodus</strong><span class="forecastDef">massutvandring eller stort uttåg.</span></li>
+<li><span class="forecastNo">69.</span><strong>explicit</strong><span class="forecastDef">tydligt uttalad och inte underförstådd.</span></li>
+<li><span class="forecastNo">70.</span><strong>fabricera</strong><span class="forecastDef">hitta på eller framställa något, ofta falskt.</span></li>
+<li><span class="forecastNo">71.</span><strong>flegmatisk</strong><span class="forecastDef">lugn och svår att hetsa upp.</span></li>
+<li><span class="forecastNo">72.</span><strong>florera</strong><span class="forecastDef">förekomma eller frodas i stor omfattning.</span></li>
+<li><span class="forecastNo">73.</span><strong>förbehåll</strong><span class="forecastDef">reservation eller villkor som begränsar ett medgivande.</span></li>
+<li><span class="forecastNo">74.</span><strong>fördragsam</strong><span class="forecastDef">tolerant och tålmodig mot andra.</span></li>
+<li><span class="forecastNo">75.</span><strong>förgrymmad</strong><span class="forecastDef">mycket arg eller förbittrad.</span></li>
+<li><span class="forecastNo">76.</span><strong>förhärskande</strong><span class="forecastDef">dominerande eller mest utbredd.</span></li>
+<li><span class="forecastNo">77.</span><strong>förkovra sig</strong><span class="forecastDef">utveckla sina kunskaper eller färdigheter.</span></li>
+<li><span class="forecastNo">78.</span><strong>förlegad</strong><span class="forecastDef">gammalmodig och inte längre aktuell.</span></li>
+<li><span class="forecastNo">79.</span><strong>förmena</strong><span class="forecastDef">neka någon något eller anse.</span></li>
+<li><span class="forecastNo">80.</span><strong>förnumstig</strong><span class="forecastDef">självsäkert beskäftig och näsvis.</span></li>
+<li><span class="forecastNo">81.</span><strong>förorätta</strong><span class="forecastDef">behandla någon orättvist eller kränkande.</span></li>
+<li><span class="forecastNo">82.</span><strong>förslagen</strong><span class="forecastDef">slug och skicklig på att hitta utvägar.</span></li>
+<li><span class="forecastNo">83.</span><strong>försumlig</strong><span class="forecastDef">slarvig med skyldigheter eller ansvar.</span></li>
+<li><span class="forecastNo">84.</span><strong>försynt</strong><span class="forecastDef">blygsam och tillbakadragen.</span></li>
+<li><span class="forecastNo">85.</span><strong>förtegen</strong><span class="forecastDef">ovillig att berätta eller yttra sig.</span></li>
+<li><span class="forecastNo">86.</span><strong>förvanska</strong><span class="forecastDef">ändra så att den ursprungliga innebörden förvrids.</span></li>
+<li><span class="forecastNo">87.</span><strong>förveten</strong><span class="forecastDef">alltför nyfiken på ett påträngande sätt.</span></li>
+<li><span class="forecastNo">88.</span><strong>gagnelig</strong><span class="forecastDef">nyttig eller till fördel.</span></li>
+<li><span class="forecastNo">89.</span><strong>gemen</strong><span class="forecastDef">elak eller låg i sitt handlande.</span></li>
+<li><span class="forecastNo">90.</span><strong>genmäle</strong><span class="forecastDef">svar eller invändning på ett påstående.</span></li>
+<li><span class="forecastNo">91.</span><strong>grannlaga</strong><span class="forecastDef">känslig och krävande att hantera med omdöme.</span></li>
+<li><span class="forecastNo">92.</span><strong>graverande</strong><span class="forecastDef">allvarligt belastande eller komprometterande.</span></li>
+<li><span class="forecastNo">93.</span><strong>halsstarrig</strong><span class="forecastDef">envist trotsig och ovillig att ge med sig.</span></li>
+<li><span class="forecastNo">94.</span><strong>handfallen</strong><span class="forecastDef">rådvill och oförmögen att agera.</span></li>
+<li><span class="forecastNo">95.</span><strong>hävdvunnen</strong><span class="forecastDef">etablerad genom lång tradition.</span></li>
+<li><span class="forecastNo">96.</span><strong>illavarslande</strong><span class="forecastDef">som tyder på att något dåligt kan hända.</span></li>
+<li><span class="forecastNo">97.</span><strong>implicit</strong><span class="forecastDef">underförstådd utan att uttryckas direkt.</span></li>
+<li><span class="forecastNo">98.</span><strong>indolent</strong><span class="forecastDef">slö, passiv eller likgiltig.</span></li>
+<li><span class="forecastNo">99.</span><strong>infall</strong><span class="forecastDef">plötslig idé eller impuls.</span></li>
+<li><span class="forecastNo">100.</span><strong>införstådd</strong><span class="forecastDef">medveten om och överens med något.</span></li>
+<li><span class="forecastNo">101.</span><strong>inkräkta</strong><span class="forecastDef">olovligen ta sig in på någon annans område eller rätt.</span></li>
+<li><span class="forecastNo">102.</span><strong>inlemma</strong><span class="forecastDef">införliva som en del av en större helhet.</span></li>
+<li><span class="forecastNo">103.</span><strong>insinuera</strong><span class="forecastDef">antyda något negativt utan att säga det öppet.</span></li>
+<li><span class="forecastNo">104.</span><strong>inställsam</strong><span class="forecastDef">överdrivet vänlig för att vinna någons gunst.</span></li>
+<li><span class="forecastNo">105.</span><strong>intetsägande</strong><span class="forecastDef">utan tydligt innehåll eller karaktär.</span></li>
+<li><span class="forecastNo">106.</span><strong>irrelevant</strong><span class="forecastDef">utan betydelse för det aktuella sammanhanget.</span></li>
+<li><span class="forecastNo">107.</span><strong>kallsinnig</strong><span class="forecastDef">känslomässigt kylig eller ointresserad.</span></li>
+<li><span class="forecastNo">108.</span><strong>klandra</strong><span class="forecastDef">lägga skuld på eller kritisera någon.</span></li>
+<li><span class="forecastNo">109.</span><strong>koncis</strong><span class="forecastDef">kortfattad men innehållsrik.</span></li>
+<li><span class="forecastNo">110.</span><strong>konform</strong><span class="forecastDef">anpassad till rådande normer eller mönster.</span></li>
+<li><span class="forecastNo">111.</span><strong>kongenial</strong><span class="forecastDef">mycket väl överensstämmande i anda eller läggning.</span></li>
+<li><span class="forecastNo">112.</span><strong>konsekvent</strong><span class="forecastDef">följdriktig och enhetlig i sitt handlande.</span></li>
+<li><span class="forecastNo">113.</span><strong>konsternation</strong><span class="forecastDef">stark bestörtning eller förvirring.</span></li>
+<li><span class="forecastNo">114.</span><strong>konvergera</strong><span class="forecastDef">närma sig varandra eller gå mot samma punkt.</span></li>
+<li><span class="forecastNo">115.</span><strong>koryfé</strong><span class="forecastDef">framstående person inom ett område.</span></li>
+<li><span class="forecastNo">116.</span><strong>lakonisk</strong><span class="forecastDef">mycket kortfattad och fåordig.</span></li>
+<li><span class="forecastNo">117.</span><strong>latent</strong><span class="forecastDef">dold men möjlig att utvecklas eller visa sig.</span></li>
+<li><span class="forecastNo">118.</span><strong>legitim</strong><span class="forecastDef">laglig, berättigad eller allmänt godtagbar.</span></li>
+<li><span class="forecastNo">119.</span><strong>lyhörd</strong><span class="forecastDef">uppmärksam och mottaglig för andras behov eller signaler.</span></li>
+<li><span class="forecastNo">120.</span><strong>makaber</strong><span class="forecastDef">hemsk eller kuslig med anknytning till död.</span></li>
+<li><span class="forecastNo">121.</span><strong>maliciös</strong><span class="forecastDef">illvillig eller elakt skadeglad.</span></li>
+<li><span class="forecastNo">122.</span><strong>medgörlig</strong><span class="forecastDef">villig att samarbeta eller ge efter.</span></li>
+<li><span class="forecastNo">123.</span><strong>misskund</strong><span class="forecastDef">medlidande eller barmhärtighet.</span></li>
+<li><span class="forecastNo">124.</span><strong>mångordig</strong><span class="forecastDef">som använder onödigt många ord.</span></li>
+<li><span class="forecastNo">125.</span><strong>negligera</strong><span class="forecastDef">försumma eller inte bry sig om.</span></li>
+<li><span class="forecastNo">126.</span><strong>nitisk</strong><span class="forecastDef">mycket plikttrogen och ivrig.</span></li>
+<li><span class="forecastNo">127.</span><strong>närgången</strong><span class="forecastDef">påträngande eller alltför personlig.</span></li>
+<li><span class="forecastNo">128.</span><strong>obsolet</strong><span class="forecastDef">föråldrad och inte längre användbar.</span></li>
+<li><span class="forecastNo">129.</span><strong>obstinat</strong><span class="forecastDef">envist motsträvig eller trotsig.</span></li>
+<li><span class="forecastNo">130.</span><strong>oförvitlig</strong><span class="forecastDef">moraliskt oklanderlig och utan skuld.</span></li>
+<li><span class="forecastNo">131.</span><strong>okvädinsord</strong><span class="forecastDef">förolämpande eller grovt skällsord.</span></li>
+<li><span class="forecastNo">132.</span><strong>omak</strong><span class="forecastDef">besvär eller extra ansträngning.</span></li>
+<li><span class="forecastNo">133.</span><strong>omdömesgill</strong><span class="forecastDef">som visar gott omdöme.</span></li>
+<li><span class="forecastNo">134.</span><strong>omständlig</strong><span class="forecastDef">onödigt utförlig eller krånglig.</span></li>
+<li><span class="forecastNo">135.</span><strong>opåkallad</strong><span class="forecastDef">onödig eller utan rimlig anledning.</span></li>
+<li><span class="forecastNo">136.</span><strong>ortodox</strong><span class="forecastDef">strikt trogen en etablerad lära eller tradition.</span></li>
+<li><span class="forecastNo">137.</span><strong>ostentativ</strong><span class="forecastDef">avsiktligt iögonfallande eller skrytsam.</span></li>
+<li><span class="forecastNo">138.</span><strong>paradoxal</strong><span class="forecastDef">skenbart motsägelsefull men ändå möjlig.</span></li>
+<li><span class="forecastNo">139.</span><strong>patetisk</strong><span class="forecastDef">ömkansvärd eller överdrivet känslosam.</span></li>
+<li><span class="forecastNo">140.</span><strong>perifer</strong><span class="forecastDef">som ligger i utkanten eller har mindre betydelse.</span></li>
+<li><span class="forecastNo">141.</span><strong>pertinent</strong><span class="forecastDef">direkt relevant och träffande.</span></li>
+<li><span class="forecastNo">142.</span><strong>polemisk</strong><span class="forecastDef">stridslysten och argumenterande.</span></li>
+<li><span class="forecastNo">143.</span><strong>prekär</strong><span class="forecastDef">osäker, riskfylld eller bekymmersam.</span></li>
+<li><span class="forecastNo">144.</span><strong>presumtiv</strong><span class="forecastDef">förmodad eller sannolik i en framtida roll.</span></li>
+<li><span class="forecastNo">145.</span><strong>pretentiös</strong><span class="forecastDef">anspråksfull på ett överdrivet sätt.</span></li>
+<li><span class="forecastNo">146.</span><strong>profan</strong><span class="forecastDef">världslig eller respektlös inför det heliga.</span></li>
+<li><span class="forecastNo">147.</span><strong>provisorisk</strong><span class="forecastDef">tillfällig i väntan på en permanent lösning.</span></li>
+<li><span class="forecastNo">148.</span><strong>prudentlig</strong><span class="forecastDef">överdrivet prydlig eller petigt ordentlig.</span></li>
+<li><span class="forecastNo">149.</span><strong>raffinerad</strong><span class="forecastDef">förfinad, sofistikerad eller sinnrikt utformad.</span></li>
+<li><span class="forecastNo">150.</span><strong>repressalie</strong><span class="forecastDef">motåtgärd som svar på en tidigare handling.</span></li>
+<li><span class="forecastNo">151.</span><strong>resignerad</strong><span class="forecastDef">uppgivet accepterande av något man inte kan ändra.</span></li>
+<li><span class="forecastNo">152.</span><strong>rudimentär</strong><span class="forecastDef">mycket enkel eller ofullständigt utvecklad.</span></li>
+<li><span class="forecastNo">153.</span><strong>ryktbar</strong><span class="forecastDef">välkänd eller berömd.</span></li>
+<li><span class="forecastNo">154.</span><strong>sakrosankt</strong><span class="forecastDef">så helig eller oantastlig att den inte får ifrågasättas.</span></li>
+<li><span class="forecastNo">155.</span><strong>salvelsefull</strong><span class="forecastDef">högtidligt och inställsamt from i tonen.</span></li>
+<li><span class="forecastNo">156.</span><strong>sanktionera</strong><span class="forecastDef">godkänna eller ge officiellt tillstånd till.</span></li>
+<li><span class="forecastNo">157.</span><strong>schism</strong><span class="forecastDef">djup splittring inom en grupp eller organisation.</span></li>
+<li><span class="forecastNo">158.</span><strong>skrupelfri</strong><span class="forecastDef">utan moraliska betänkligheter.</span></li>
+<li><span class="forecastNo">159.</span><strong>skärskåda</strong><span class="forecastDef">granska mycket noggrant och kritiskt.</span></li>
+<li><span class="forecastNo">160.</span><strong>slentrian</strong><span class="forecastDef">rutinmässigt handlande utan eftertanke.</span></li>
+<li><span class="forecastNo">161.</span><strong>snarstucken</strong><span class="forecastDef">lättretlig och snabbt förolämpad.</span></li>
+<li><span class="forecastNo">162.</span><strong>spörsmål</strong><span class="forecastDef">fråga eller angelägenhet.</span></li>
+<li><span class="forecastNo">163.</span><strong>stagnation</strong><span class="forecastDef">tillstånd där utvecklingen står stilla.</span></li>
+<li><span class="forecastNo">164.</span><strong>stringent</strong><span class="forecastDef">logiskt sammanhängande och strikt.</span></li>
+<li><span class="forecastNo">165.</span><strong>subtil</strong><span class="forecastDef">fin, svårfångad eller inte uppenbar.</span></li>
+<li><span class="forecastNo">166.</span><strong>suffisant</strong><span class="forecastDef">självgod och överlägsen i sitt sätt.</span></li>
+<li><span class="forecastNo">167.</span><strong>svårmod</strong><span class="forecastDef">djup nedstämdhet eller melankoli.</span></li>
+<li><span class="forecastNo">168.</span><strong>syntes</strong><span class="forecastDef">sammanfogning av delar till en helhet.</span></li>
+<li><span class="forecastNo">169.</span><strong>tillstymmelse</strong><span class="forecastDef">litet tecken eller antydan till något.</span></li>
+<li><span class="forecastNo">170.</span><strong>tillvita</strong><span class="forecastDef">anklaga eller beskylla någon för något.</span></li>
+<li><span class="forecastNo">171.</span><strong>tradera</strong><span class="forecastDef">föra vidare från generation till generation.</span></li>
+<li><span class="forecastNo">172.</span><strong>trankil</strong><span class="forecastDef">lugn och fridfull.</span></li>
+<li><span class="forecastNo">173.</span><strong>trägen</strong><span class="forecastDef">ihärdig och uthållig.</span></li>
+<li><span class="forecastNo">174.</span><strong>undfallande</strong><span class="forecastDef">alltför eftergiven eller foglig.</span></li>
+<li><span class="forecastNo">175.</span><strong>underminera</strong><span class="forecastDef">försvaga gradvis eller i det fördolda.</span></li>
+<li><span class="forecastNo">176.</span><strong>uppstudsig</strong><span class="forecastDef">trotsig och respektlöst motsträvig.</span></li>
+<li><span class="forecastNo">177.</span><strong>urskillning</strong><span class="forecastDef">förmåga att bedöma och skilja mellan alternativ.</span></li>
+<li><span class="forecastNo">178.</span><strong>vederhäftig</strong><span class="forecastDef">pålitlig, saklig och välgrundad.</span></li>
+<li><span class="forecastNo">179.</span><strong>vedersakare</strong><span class="forecastDef">motståndare eller fiende.</span></li>
+<li><span class="forecastNo">180.</span><strong>vehement</strong><span class="forecastDef">mycket kraftfull och häftig.</span></li>
+<li><span class="forecastNo">181.</span><strong>vidlyftig</strong><span class="forecastDef">omfattande, omständlig eller utsvävande.</span></li>
+<li><span class="forecastNo">182.</span><strong>vindikation</strong><span class="forecastDef">försvar eller upprättelse av en rättighet eller ståndpunkt.</span></li>
+<li><span class="forecastNo">183.</span><strong>vördnad</strong><span class="forecastDef">djup respekt och aktning.</span></li>
+<li><span class="forecastNo">184.</span><strong>yppa</strong><span class="forecastDef">avslöja eller berätta något som varit dolt.</span></li>
+<li><span class="forecastNo">185.</span><strong>ådagalägga</strong><span class="forecastDef">visa eller ge tydliga prov på.</span></li>
+<li><span class="forecastNo">186.</span><strong>åsamka</strong><span class="forecastDef">orsaka någon skada, kostnad eller besvär.</span></li>
+<li><span class="forecastNo">187.</span><strong>äventyra</strong><span class="forecastDef">utsätta för risk eller fara.</span></li>
+<li><span class="forecastNo">188.</span><strong>ömsint</strong><span class="forecastDef">varmt känslosam och kärleksfull.</span></li>
+<li><span class="forecastNo">189.</span><strong>överslätande</strong><span class="forecastDef">som tonar ned problem eller motsättningar.</span></li>
+<li><span class="forecastNo">190.</span><strong>abrovink</strong><span class="forecastDef">knep, finurlig lösning eller krånglig anordning.</span></li>
+<li><span class="forecastNo">191.</span><strong>ackurat</strong><span class="forecastDef">precis, riktig eller noggrann.</span></li>
+<li><span class="forecastNo">192.</span><strong>affinitet</strong><span class="forecastDef">naturlig samhörighet eller stark likhet.</span></li>
+<li><span class="forecastNo">193.</span><strong>agnostisk</strong><span class="forecastDef">som anser att säker kunskap om Gud inte är möjlig.</span></li>
+<li><span class="forecastNo">194.</span><strong>altruistisk</strong><span class="forecastDef">osjälvisk och inriktad på andras bästa.</span></li>
+<li><span class="forecastNo">195.</span><strong>amorf</strong><span class="forecastDef">formlös eller utan tydlig struktur.</span></li>
+<li><span class="forecastNo">196.</span><strong>anrik</strong><span class="forecastDef">gammal och traditionsrik.</span></li>
+<li><span class="forecastNo">197.</span><strong>apokryf</strong><span class="forecastDef">tvivelaktigt äkta eller av osäker sanningshalt.</span></li>
+<li><span class="forecastNo">198.</span><strong>atavistisk</strong><span class="forecastDef">som återgår till eller påminner om ett äldre utvecklingsstadium.</span></li>
+<li><span class="forecastNo">199.</span><strong>befängd</strong><span class="forecastDef">orimlig, absurd eller dum.</span></li>
+<li><span class="forecastNo">200.</span><strong>betänklig</strong><span class="forecastDef">oroande, tveksam eller problematisk.</span></li>
+</ol>
+  </div>
+</section>
+
+<section id="forecastPractice" class="screen">
+<div class="practiceShell">
+  <div class="topbar"><button class="exit" id="forecastPracticeExit" type="button">← TILLBAKA</button><div class="counter" id="forecastCounter">1 / 5</div></div>
+  <div class="card forecastQuizCard">
+    <div class="kicker">PROGNOS ORD · AI-ANALYS</div>
+    <h2 id="forecastWord"></h2>
+    <p class="forecastQuizPrompt">Vilken förklaring passar bäst?</p>
+    <div id="forecastOptions" class="options"></div>
+    <div id="forecastFeedback" class="feedback"></div>
+    <button id="forecastNextBtn" class="next" type="button" style="display:none">NÄSTA →</button>
+  </div>
+</div></section>
 <section id="summary" class="screen">
  <div class="summaryCard card"><h2>Passet är klart</h2><div class="score" id="score">0/5</div><p id="summaryText"></p>
 <div class="retryPrompt" id="retryPrompt" style="display:none">
@@ -1271,6 +1784,47 @@ function awardXp(){
   saveState();renderXp();
 }
 function showScreen(id){document.querySelectorAll('.screen').forEach(s=>s.classList.toggle('active',s.id===id));}
+
+document.getElementById('studyBtn').addEventListener('click',(e)=>{
+  e.preventDefault();e.stopPropagation();showScreen('study');
+  window.scrollTo({top:0,behavior:'instant'});
+});
+document.getElementById('studyBack').addEventListener('click',()=>showScreen('home'));
+document.getElementById('studyForecastBtn').addEventListener('click',()=>{showScreen('forecast');const f=document.getElementById('forecast');if(f)f.scrollTop=0;});
+document.querySelectorAll('.studyTab').forEach(btn=>btn.addEventListener('click',()=>{
+  document.querySelectorAll('.studyTab').forEach(x=>x.classList.toggle('active',x===btn));
+  document.querySelectorAll('.studyGuide').forEach(g=>g.classList.toggle('active',g.id==='study'+btn.dataset.study));
+  const s=document.getElementById('study');if(s)s.scrollTop=0;
+}));
+
+
+const FORECAST_WORDS=[{"w": "abdikera", "d": "avsäga sig en tron eller annan hög ställning."}, {"w": "abstrus", "d": "svårbegriplig och invecklad."}, {"w": "acklamation", "d": "beslut genom muntligt bifall utan rösträkning."}, {"w": "adekvat", "d": "lämplig och tillräcklig för ändamålet."}, {"w": "affekterad", "d": "konstlad eller tillgjord i sitt sätt."}, {"w": "aggregera", "d": "samla eller slå ihop till en helhet."}, {"w": "aktsam", "d": "försiktig och varsam."}, {"w": "allokera", "d": "fördela resurser till ett visst ändamål."}, {"w": "ambivalent", "d": "kluven mellan motstridiga känslor eller uppfattningar."}, {"w": "anakronism", "d": "något som hör hemma i en annan tidsperiod."}, {"w": "anamma", "d": "ta till sig eller börja använda."}, {"w": "annalkande", "d": "som närmar sig eller snart inträffar."}, {"w": "anomali", "d": "avvikelse från det normala eller förväntade."}, {"w": "anspråkslös", "d": "enkel och utan krav på uppmärksamhet."}, {"w": "antagonistisk", "d": "fientligt eller motverkande inställd."}, {"w": "apatisk", "d": "likgiltig och utan energi eller engagemang."}, {"w": "arbiträr", "d": "godtycklig och utan tydlig saklig grund."}, {"w": "arvedel", "d": "den del av ett arv som tillfaller en arvinge."}, {"w": "asketisk", "d": "präglad av självdisciplin och avstående från bekvämligheter."}, {"w": "assimilera", "d": "införliva så att något blir en del av en större helhet."}, {"w": "autentisk", "d": "äkta och trovärdig."}, {"w": "avfärda", "d": "förkasta eller inte ta på allvar."}, {"w": "avog", "d": "negativt eller motvilligt inställd."}, {"w": "avyttra", "d": "sälja eller göra sig av med egendom."}, {"w": "balansgång", "d": "svår avvägning mellan motstridiga krav."}, {"w": "befryndad", "d": "besläktad eller nära förbunden."}, {"w": "behjärtansvärd", "d": "värd stöd, uppskattning eller sympati."}, {"w": "benägen", "d": "ha lätt eller tendens att göra något."}, {"w": "beriktigande", "d": "rättelse av en felaktig uppgift."}, {"w": "beskaffenhet", "d": "hur något är beskaffat eller sammansatt."}, {"w": "besudla", "d": "smutsa ner, konkret eller bildligt."}, {"w": "beveka", "d": "förmå någon att ge efter genom vädjan."}, {"w": "bevekelsegrund", "d": "skäl eller motiv som påverkar ett beslut."}, {"w": "bifall", "d": "godkännande eller instämmande."}, {"w": "bisarr", "d": "mycket egendomlig eller underlig."}, {"w": "borgenär", "d": "person eller organisation som har pengar att fordra."}, {"w": "brasklapp", "d": "reservation eller förbehåll som läggs till ett uttalande."}, {"w": "burdus", "d": "ohövlig och bufflig."}, {"w": "cynisk", "d": "misstroende mot människors motiv och ofta känslokall."}, {"w": "debacel", "d": "stort misslyckande eller sammanbrott."}, {"w": "deducera", "d": "dra en slutsats från allmänna premisser."}, {"w": "deklamera", "d": "framföra text högt och uttrycksfullt."}, {"w": "delikat", "d": "känslig eller svår att hantera."}, {"w": "desavouera", "d": "ta avstånd från eller underkänna någon eller något."}, {"w": "desillusionerad", "d": "besviken efter att ha förlorat tidigare föreställningar."}, {"w": "devot", "d": "mycket hängiven eller underdånig."}, {"w": "diffus", "d": "otydlig, utspridd eller svår att avgränsa."}, {"w": "diskrepans", "d": "bristande överensstämmelse eller tydlig skillnad."}, {"w": "dogmatisk", "d": "tvärsäker och bunden vid fasta läror."}, {"w": "drastisk", "d": "kraftig och långtgående."}, {"w": "dubier", "d": "tvivel eller betänkligheter."}, {"w": "efemär", "d": "kortvarig och snabbt övergående."}, {"w": "eftertrycklig", "d": "tydlig, bestämd och kraftfull."}, {"w": "eklektisk", "d": "sammansatt av idéer eller stilar från olika håll."}, {"w": "elaborera", "d": "utveckla eller bearbeta något mer utförligt."}, {"w": "emfas", "d": "särskild betoning eller eftertryck."}, {"w": "eminent", "d": "framstående och mycket skicklig."}, {"w": "empirisk", "d": "grundad på observationer eller erfarenheter."}, {"w": "endräkt", "d": "enighet och samförstånd."}, {"w": "enkom", "d": "uteslutande eller särskilt för ett visst syfte."}, {"w": "epigon", "d": "osjälvständig efterföljare till en betydande förebild."}, {"w": "erbarmlig", "d": "mycket dålig, usel eller eländig."}, {"w": "erodera", "d": "nötas bort eller gradvis försvagas."}, {"w": "esoterisk", "d": "avsedd för eller begriplig för en liten invigd krets."}, {"w": "eufemism", "d": "förskönande eller mildrande omskrivning."}, {"w": "exalterad", "d": "mycket upphetsad eller överdrivet entusiastisk."}, {"w": "excentrisk", "d": "påfallande avvikande från det vanliga."}, {"w": "exodus", "d": "massutvandring eller stort uttåg."}, {"w": "explicit", "d": "tydligt uttalad och inte underförstådd."}, {"w": "fabricera", "d": "hitta på eller framställa något, ofta falskt."}, {"w": "flegmatisk", "d": "lugn och svår att hetsa upp."}, {"w": "florera", "d": "förekomma eller frodas i stor omfattning."}, {"w": "förbehåll", "d": "reservation eller villkor som begränsar ett medgivande."}, {"w": "fördragsam", "d": "tolerant och tålmodig mot andra."}, {"w": "förgrymmad", "d": "mycket arg eller förbittrad."}, {"w": "förhärskande", "d": "dominerande eller mest utbredd."}, {"w": "förkovra sig", "d": "utveckla sina kunskaper eller färdigheter."}, {"w": "förlegad", "d": "gammalmodig och inte längre aktuell."}, {"w": "förmena", "d": "neka någon något eller anse."}, {"w": "förnumstig", "d": "självsäkert beskäftig och näsvis."}, {"w": "förorätta", "d": "behandla någon orättvist eller kränkande."}, {"w": "förslagen", "d": "slug och skicklig på att hitta utvägar."}, {"w": "försumlig", "d": "slarvig med skyldigheter eller ansvar."}, {"w": "försynt", "d": "blygsam och tillbakadragen."}, {"w": "förtegen", "d": "ovillig att berätta eller yttra sig."}, {"w": "förvanska", "d": "ändra så att den ursprungliga innebörden förvrids."}, {"w": "förveten", "d": "alltför nyfiken på ett påträngande sätt."}, {"w": "gagnelig", "d": "nyttig eller till fördel."}, {"w": "gemen", "d": "elak eller låg i sitt handlande."}, {"w": "genmäle", "d": "svar eller invändning på ett påstående."}, {"w": "grannlaga", "d": "känslig och krävande att hantera med omdöme."}, {"w": "graverande", "d": "allvarligt belastande eller komprometterande."}, {"w": "halsstarrig", "d": "envist trotsig och ovillig att ge med sig."}, {"w": "handfallen", "d": "rådvill och oförmögen att agera."}, {"w": "hävdvunnen", "d": "etablerad genom lång tradition."}, {"w": "illavarslande", "d": "som tyder på att något dåligt kan hända."}, {"w": "implicit", "d": "underförstådd utan att uttryckas direkt."}, {"w": "indolent", "d": "slö, passiv eller likgiltig."}, {"w": "infall", "d": "plötslig idé eller impuls."}, {"w": "införstådd", "d": "medveten om och överens med något."}, {"w": "inkräkta", "d": "olovligen ta sig in på någon annans område eller rätt."}, {"w": "inlemma", "d": "införliva som en del av en större helhet."}, {"w": "insinuera", "d": "antyda något negativt utan att säga det öppet."}, {"w": "inställsam", "d": "överdrivet vänlig för att vinna någons gunst."}, {"w": "intetsägande", "d": "utan tydligt innehåll eller karaktär."}, {"w": "irrelevant", "d": "utan betydelse för det aktuella sammanhanget."}, {"w": "kallsinnig", "d": "känslomässigt kylig eller ointresserad."}, {"w": "klandra", "d": "lägga skuld på eller kritisera någon."}, {"w": "koncis", "d": "kortfattad men innehållsrik."}, {"w": "konform", "d": "anpassad till rådande normer eller mönster."}, {"w": "kongenial", "d": "mycket väl överensstämmande i anda eller läggning."}, {"w": "konsekvent", "d": "följdriktig och enhetlig i sitt handlande."}, {"w": "konsternation", "d": "stark bestörtning eller förvirring."}, {"w": "konvergera", "d": "närma sig varandra eller gå mot samma punkt."}, {"w": "koryfé", "d": "framstående person inom ett område."}, {"w": "lakonisk", "d": "mycket kortfattad och fåordig."}, {"w": "latent", "d": "dold men möjlig att utvecklas eller visa sig."}, {"w": "legitim", "d": "laglig, berättigad eller allmänt godtagbar."}, {"w": "lyhörd", "d": "uppmärksam och mottaglig för andras behov eller signaler."}, {"w": "makaber", "d": "hemsk eller kuslig med anknytning till död."}, {"w": "maliciös", "d": "illvillig eller elakt skadeglad."}, {"w": "medgörlig", "d": "villig att samarbeta eller ge efter."}, {"w": "misskund", "d": "medlidande eller barmhärtighet."}, {"w": "mångordig", "d": "som använder onödigt många ord."}, {"w": "negligera", "d": "försumma eller inte bry sig om."}, {"w": "nitisk", "d": "mycket plikttrogen och ivrig."}, {"w": "närgången", "d": "påträngande eller alltför personlig."}, {"w": "obsolet", "d": "föråldrad och inte längre användbar."}, {"w": "obstinat", "d": "envist motsträvig eller trotsig."}, {"w": "oförvitlig", "d": "moraliskt oklanderlig och utan skuld."}, {"w": "okvädinsord", "d": "förolämpande eller grovt skällsord."}, {"w": "omak", "d": "besvär eller extra ansträngning."}, {"w": "omdömesgill", "d": "som visar gott omdöme."}, {"w": "omständlig", "d": "onödigt utförlig eller krånglig."}, {"w": "opåkallad", "d": "onödig eller utan rimlig anledning."}, {"w": "ortodox", "d": "strikt trogen en etablerad lära eller tradition."}, {"w": "ostentativ", "d": "avsiktligt iögonfallande eller skrytsam."}, {"w": "paradoxal", "d": "skenbart motsägelsefull men ändå möjlig."}, {"w": "patetisk", "d": "ömkansvärd eller överdrivet känslosam."}, {"w": "perifer", "d": "som ligger i utkanten eller har mindre betydelse."}, {"w": "pertinent", "d": "direkt relevant och träffande."}, {"w": "polemisk", "d": "stridslysten och argumenterande."}, {"w": "prekär", "d": "osäker, riskfylld eller bekymmersam."}, {"w": "presumtiv", "d": "förmodad eller sannolik i en framtida roll."}, {"w": "pretentiös", "d": "anspråksfull på ett överdrivet sätt."}, {"w": "profan", "d": "världslig eller respektlös inför det heliga."}, {"w": "provisorisk", "d": "tillfällig i väntan på en permanent lösning."}, {"w": "prudentlig", "d": "överdrivet prydlig eller petigt ordentlig."}, {"w": "raffinerad", "d": "förfinad, sofistikerad eller sinnrikt utformad."}, {"w": "repressalie", "d": "motåtgärd som svar på en tidigare handling."}, {"w": "resignerad", "d": "uppgivet accepterande av något man inte kan ändra."}, {"w": "rudimentär", "d": "mycket enkel eller ofullständigt utvecklad."}, {"w": "ryktbar", "d": "välkänd eller berömd."}, {"w": "sakrosankt", "d": "så helig eller oantastlig att den inte får ifrågasättas."}, {"w": "salvelsefull", "d": "högtidligt och inställsamt from i tonen."}, {"w": "sanktionera", "d": "godkänna eller ge officiellt tillstånd till."}, {"w": "schism", "d": "djup splittring inom en grupp eller organisation."}, {"w": "skrupelfri", "d": "utan moraliska betänkligheter."}, {"w": "skärskåda", "d": "granska mycket noggrant och kritiskt."}, {"w": "slentrian", "d": "rutinmässigt handlande utan eftertanke."}, {"w": "snarstucken", "d": "lättretlig och snabbt förolämpad."}, {"w": "spörsmål", "d": "fråga eller angelägenhet."}, {"w": "stagnation", "d": "tillstånd där utvecklingen står stilla."}, {"w": "stringent", "d": "logiskt sammanhängande och strikt."}, {"w": "subtil", "d": "fin, svårfångad eller inte uppenbar."}, {"w": "suffisant", "d": "självgod och överlägsen i sitt sätt."}, {"w": "svårmod", "d": "djup nedstämdhet eller melankoli."}, {"w": "syntes", "d": "sammanfogning av delar till en helhet."}, {"w": "tillstymmelse", "d": "litet tecken eller antydan till något."}, {"w": "tillvita", "d": "anklaga eller beskylla någon för något."}, {"w": "tradera", "d": "föra vidare från generation till generation."}, {"w": "trankil", "d": "lugn och fridfull."}, {"w": "trägen", "d": "ihärdig och uthållig."}, {"w": "undfallande", "d": "alltför eftergiven eller foglig."}, {"w": "underminera", "d": "försvaga gradvis eller i det fördolda."}, {"w": "uppstudsig", "d": "trotsig och respektlöst motsträvig."}, {"w": "urskillning", "d": "förmåga att bedöma och skilja mellan alternativ."}, {"w": "vederhäftig", "d": "pålitlig, saklig och välgrundad."}, {"w": "vedersakare", "d": "motståndare eller fiende."}, {"w": "vehement", "d": "mycket kraftfull och häftig."}, {"w": "vidlyftig", "d": "omfattande, omständlig eller utsvävande."}, {"w": "vindikation", "d": "försvar eller upprättelse av en rättighet eller ståndpunkt."}, {"w": "vördnad", "d": "djup respekt och aktning."}, {"w": "yppa", "d": "avslöja eller berätta något som varit dolt."}, {"w": "ådagalägga", "d": "visa eller ge tydliga prov på."}, {"w": "åsamka", "d": "orsaka någon skada, kostnad eller besvär."}, {"w": "äventyra", "d": "utsätta för risk eller fara."}, {"w": "ömsint", "d": "varmt känslosam och kärleksfull."}, {"w": "överslätande", "d": "som tonar ned problem eller motsättningar."}, {"w": "abrovink", "d": "knep, finurlig lösning eller krånglig anordning."}, {"w": "ackurat", "d": "precis, riktig eller noggrann."}, {"w": "affinitet", "d": "naturlig samhörighet eller stark likhet."}, {"w": "agnostisk", "d": "som anser att säker kunskap om Gud inte är möjlig."}, {"w": "altruistisk", "d": "osjälvisk och inriktad på andras bästa."}, {"w": "amorf", "d": "formlös eller utan tydlig struktur."}, {"w": "anrik", "d": "gammal och traditionsrik."}, {"w": "apokryf", "d": "tvivelaktigt äkta eller av osäker sanningshalt."}, {"w": "atavistisk", "d": "som återgår till eller påminner om ett äldre utvecklingsstadium."}, {"w": "befängd", "d": "orimlig, absurd eller dum."}, {"w": "betänklig", "d": "oroande, tveksam eller problematisk."}];
+let forecastSession=[],forecastIndex=0,forecastScore=0,forecastLocked=false;
+
+document.getElementById('forecastBack').addEventListener('click',()=>showScreen('study'));
+document.getElementById('forecastPracticeExit').addEventListener('click',()=>showScreen('forecast'));
+document.getElementById('forecastPracticeBtn').addEventListener('click',()=>{
+ forecastSession=shuffle(FORECAST_WORDS.slice()).slice(0,5);forecastIndex=0;forecastScore=0;showScreen('forecastPractice');renderForecast();
+});
+function renderForecast(){
+ const q=forecastSession[forecastIndex];forecastLocked=false;
+ document.getElementById('forecastCounter').textContent=(forecastIndex+1)+' / 5';
+ document.getElementById('forecastWord').textContent=q.w;
+ document.getElementById('forecastFeedback').textContent='';document.getElementById('forecastFeedback').className='feedback';
+ document.getElementById('forecastNextBtn').style.display='none';
+ const opts=shuffle([q,...shuffle(FORECAST_WORDS.filter(x=>x.w!==q.w)).slice(0,3)]);
+ const box=document.getElementById('forecastOptions');box.innerHTML='';
+ opts.forEach(opt=>{const b=document.createElement('button');b.className='option';b.type='button';b.textContent=opt.d;
+ b.onclick=()=>{if(forecastLocked)return;forecastLocked=true;const ok=opt.w===q.w;if(ok)forecastScore++;
+ document.querySelectorAll('#forecastOptions .option').forEach((x,i)=>{x.disabled=true;if(opts[i].w===q.w)x.classList.add('correct');});
+ if(!ok)b.classList.add('wrong');document.getElementById('forecastFeedback').textContent=ok?'RÄTT':'FEL · '+q.d;
+ document.getElementById('forecastFeedback').className='feedback '+(ok?'good':'bad');document.getElementById('forecastNextBtn').style.display='inline-block';};box.appendChild(b);});
+}
+document.getElementById('forecastNextBtn').addEventListener('click',()=>{
+ if(forecastIndex<4){forecastIndex++;renderForecast();}else{alert('Prognosord: '+forecastScore+' av 5 rätt.');showScreen('forecast');}
+});
+
+
 function shuffle(arr){for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]];}return arr;}
 function start(cat){
   selectedCat=cat;
@@ -1352,7 +1906,7 @@ function finish(){
   if(missedQuestions.length>0){rp.style.display='block';rw.textContent='JA – GÖR OM '+missedQuestions.length+(missedQuestions.length===1?' FEL':' FEL');}else{rp.style.display='none';}
   showScreen('summary');
 }
-document.querySelectorAll('.sectionBtn').forEach(b=>b.addEventListener('click',()=>start(b.dataset.cat)));
+document.querySelectorAll('.sectionBtn[data-cat]').forEach(b=>b.addEventListener('click',()=>start(b.dataset.cat)));
 document.getElementById('exitBtn').addEventListener('click',()=>showScreen('home'));
 document.getElementById('nextBtn').addEventListener('click',next);
 document.getElementById('solutionToggle').addEventListener('click',()=>{
