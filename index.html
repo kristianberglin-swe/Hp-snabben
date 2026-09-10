@@ -317,6 +317,104 @@ body{
 <meta name="application-name" content="HP-snabben">
 <meta name="theme-color" content="#f4ead7">
 
+
+<style id="source-badge-stamp-style">
+/* Endast den gula informationsrutan ändras – övrig layout lämnas orörd. */
+.sourceBadge{
+  position:relative!important;
+  width:min(720px,90%)!important;
+  margin:10px auto 24px!important;
+  padding:17px 24px 16px!important;
+  box-sizing:border-box!important;
+
+  background:#f6c928!important;
+  color:#17130d!important;
+  border:5px solid #17130d!important;
+  border-radius:7px!important;
+
+  box-shadow:
+    0 0 0 4px #f6c928,
+    0 0 0 6px #17130d,
+    7px 10px 16px rgba(53,39,15,.20)!important;
+
+  text-align:center!important;
+  transform:rotate(-2.2deg)!important;
+  transform-origin:center!important;
+  overflow:hidden!important;
+}
+
+/* Sliten/stämplad yta utan bildfil */
+.sourceBadge::before{
+  content:""!important;
+  position:absolute!important;
+  inset:3px!important;
+  pointer-events:none!important;
+  opacity:.22!important;
+  background:
+    repeating-linear-gradient(7deg,
+      transparent 0 8px,
+      rgba(255,255,255,.85) 9px 10px,
+      transparent 11px 18px),
+    repeating-linear-gradient(96deg,
+      transparent 0 17px,
+      rgba(25,20,12,.55) 18px 19px,
+      transparent 20px 33px)!important;
+  mix-blend-mode:soft-light!important;
+}
+
+.sourceBadge::after{
+  content:"★   ENDAST TIDIGARE HP-FRÅGOR   ★"!important;
+  position:relative!important;
+  display:block!important;
+  margin-top:10px!important;
+  padding-top:8px!important;
+  border-top:3px solid #17130d!important;
+  font-size:.64rem!important;
+  line-height:1!important;
+  font-weight:1000!important;
+  letter-spacing:.10em!important;
+}
+
+.sourceBadgeTop{
+  position:relative!important;
+  display:block!important;
+  margin:0 0 4px!important;
+  color:#17130d!important;
+  font-size:.63rem!important;
+  line-height:1.05!important;
+  font-weight:1000!important;
+  letter-spacing:.12em!important;
+  text-transform:uppercase!important;
+}
+
+.sourceBadge strong{
+  position:relative!important;
+  display:block!important;
+  max-width:100%!important;
+  color:#17130d!important;
+  font-size:clamp(1rem,2.15vw,1.5rem)!important;
+  line-height:1.05!important;
+  font-weight:1000!important;
+  letter-spacing:.015em!important;
+  text-transform:uppercase!important;
+}
+
+@media(max-width:650px){
+  .sourceBadge{
+    width:88%!important;
+    margin:8px auto 20px!important;
+    padding:14px 14px 13px!important;
+    transform:rotate(-1.7deg)!important;
+    border-width:4px!important;
+  }
+  .sourceBadge::after{
+    font-size:.48rem!important;
+    letter-spacing:.06em!important;
+  }
+  .sourceBadgeTop{font-size:.52rem!important}
+}
+</style>
+
 </head>
 <body>
 <div class="xpHud xpWide" id="xpHud">
